@@ -1,0 +1,13 @@
+Using API with PHP
+
+Include 'QRCodeAPI.class.php' in your project and initialize a new 'QRCodeAPI' instance.
+
+include_once("include/QRCodeAPI.class.php");
+$api = new QRCodeAPI();
+$png = $api->generate("http://www.good-survey.com", "png");
+$png = $api->encode("http://www.good-survey.com", "png", 5, 8, 4, "byte", "M");
+$json = $api->decode("images/http-www-good-survey-com.png");
+
+See comments in the sample.
+
+Thanks to Bill Ortell for CURL code and testing.
